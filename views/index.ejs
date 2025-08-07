@@ -13,15 +13,15 @@
             <h3 class="user">@<%=post.username%></h3>
             <h4 class="content"><%=post.content%></h4>
             <p><%=post.created_at.toString().split(" ").slice(0,5).join("-")%></p>
-            <a href="http://localhost:8080/posts/<%=post.id%>">View Post</a>
-            <a href="http://localhost:8080/posts/<%=post.id%>/edit">Edit Post</a>
+            <a href="/posts/<%=post.id%>">View Post</a>
+            <a href="/posts/<%=post.id%>/edit">Edit Post</a>
             <form method="post" action="/posts/<%=post.id%>?_method=DELETE" >
                 <button>Delete Post</button>
             </form>
         </div>
     <%}%>
     <br>
-    <a href="http://localhost:8080/posts/new">Create New Post</a>
+    <a href="/posts/new">Create New Post</a>
 </body>
 </html>
 
