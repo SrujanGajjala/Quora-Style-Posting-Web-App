@@ -1,0 +1,101 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Edit your post</h1>
+    <p>Post id : <%=post.id%></p>
+    <p>Username : @<%=post.username%></p>
+    <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
+        <textarea name="content" rows="15" cols="100"><%=post.content%></textarea>
+        <br>
+        <button>Submit</button>
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Post</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .form-container {
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .form-container textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #ffe7c1;
+      font-size: 15px;
+      color: #333;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+
+    .form-container button {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .form-container button:hover {
+      background-color: #d32f2f;
+    }
+
+    h1 {
+      text-align: center;
+      color: #880808;
+      margin-bottom: 20px;
+    }
+
+    .meta {
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Edit Your Post</h1>
+    <div class="meta">
+      <p>Post ID: <%= post.id %></p>
+      <p>Username: @<%= post.username %></p>
+    </div>
+    <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
+      <label for="content">Content:</label>
+      <textarea name="content" id="content" rows="10"><%= post.content %></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
