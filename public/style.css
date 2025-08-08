@@ -12,6 +12,21 @@
 
 /* Reset default margin/padding */
 /* Quora-like Reset & Base */
+.topDiv {
+    position: relative;
+    text-align: center; 
+    padding: 10px 20px;
+}
+
+.topDiv h1 {
+    margin: 0;
+}
+.create_post {
+    position: absolute;
+    right: 20px; 
+    top: 50%;
+    transform: translateY(-50%); 
+}
 * {
     margin: 0;
     padding: 0;
